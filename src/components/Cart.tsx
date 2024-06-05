@@ -81,6 +81,7 @@ function Cart() {
                             <Image
                                 src="/robot_no_cart.png"
                                 fill
+                                unoptimized
                                 alt="robot empty cart"
                             ></Image>
                         </div>
