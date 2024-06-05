@@ -9,6 +9,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "./ui/sheet";
+import CartRobot from "../../public/robot.png";
 import { Separator } from "./ui/separator";
 import { formatPrice } from "@/lib/utils";
 import Link from "next/link";
@@ -79,7 +80,7 @@ function Cart() {
                             className="relative mb-4 h-60 w-60 text-muted-foreground"
                         >
                             <Image
-                                src="/robot_no_cart.png"
+                                src={CartRobot}
                                 fill
                                 alt="robot empty cart"
                             />
