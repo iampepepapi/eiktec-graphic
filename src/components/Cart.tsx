@@ -83,7 +83,7 @@ function Cart() {
                                 fill
                                 unoptimized
                                 alt="robot empty cart"
-                            ></Image>
+                            />
                         </div>
                         <div className="text-xl font-semibold">
                             Your cart is empty
