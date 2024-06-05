@@ -22,17 +22,17 @@ export const PRODUCT_CATEGORIES: Category[] = [
             {
                 name: "Editor picks",
                 href: "#",
-                imageSrc: "/nav/ui-kits/mixed.jpg",
+                imageSrc: "static/nav/ui-kits/mixed.jpg",
             },
             {
                 name: "New Arrivals",
                 href: "#",
-                imageSrc: "/nav/ui-kits/blue.jpg",
+                imageSrc: "static/nav/ui-kits/blue.jpg",
             },
             {
                 name: "Bestseller",
                 href: "#",
-                imageSrc: "/nav/ui-kits/purple.jpg",
+                imageSrc: "static/nav/ui-kits/purple.jpg",
             },
         ],
     },
@@ -44,17 +44,17 @@ export const PRODUCT_CATEGORIES: Category[] = [
             {
                 name: "Favorite Icon Picks",
                 href: "#",
-                imageSrc: "/nav/icons/picks.jpg",
+                imageSrc: "static/nav/icons/picks.jpg",
             },
             {
                 name: "New Arrivals",
                 href: "#",
-                imageSrc: "/nav/icons/new.jpg",
+                imageSrc: "static/nav/icons/new.jpg",
             },
             {
                 name: "Bestselling Icons",
                 href: "#",
-                imageSrc: "/nav/icons/bestsellers.jpg",
+                imageSrc: "static/nav/icons/bestsellers.jpg",
             },
         ],
     },
@@ -65,7 +65,7 @@ export const PRODUCT_CATEGORIES: Category[] = [
         featured: [
             {
                 name: "Business Templates",
-                imageSrc: "/nav/icons/bestsellers.jpg",
+                imageSrc: "static/nav/icons/bestsellers.jpg",
                 href: "#",
             },
             {
@@ -76,16 +76,8 @@ export const PRODUCT_CATEGORIES: Category[] = [
                 name: "E-commerce Templates",
                 href: "#",
             },
-            {
-                name: "Portfolio Templates",
-                href: "#",
-                imageSrc: "/nav/icons/bestsellers.jpg",
-            },
-            {
-                name: "Blog Templates",
-                href: "#",
-                imageSrc: "/nav/icons/bestsellers.jpg",
-            },
+
+
 
         ],
     },
