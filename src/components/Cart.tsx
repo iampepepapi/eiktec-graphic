@@ -78,10 +78,9 @@ function Cart() {
                             aria-hidden="true"
                             className="relative mb-4 h-60 w-60 text-muted-foreground"
                         >
-                            <Image
-                                src="/robot_no_cart.png"
-                                fill
-                                unoptimized
+                            <img
+                                src="/robot.png"
+                                className="object-fill"
                                 alt="robot empty cart"
                             />
                         </div>
