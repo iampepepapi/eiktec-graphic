@@ -79,13 +79,14 @@ export const PRODUCT_CATEGORIES: Category[] = [
             {
                 name: "Portfolio Templates",
                 href: "#",
-                imageSrc: "/nav/icons / bestsellers.jpg",
+                imageSrc: "/nav/icons/bestsellers.jpg",
             },
             {
                 name: "Blog Templates",
                 href: "#",
                 imageSrc: "/nav/icons/bestsellers.jpg",
             },
+
         ],
     },
 ];

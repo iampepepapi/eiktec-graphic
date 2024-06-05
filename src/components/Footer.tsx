@@ -88,7 +88,8 @@ function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 text-center text-sm text-gray-500">
-                    &copy; 2024 Company Name. All rights reserved.
+                    &copy; 2024 <span className="font- font-bold">eiktec</span>.
+                    All rights reserved.
                 </div>
             </div>
         </footer>

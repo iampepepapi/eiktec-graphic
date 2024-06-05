@@ -1,7 +1,6 @@
-import Footer from "@/components/Footer";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { ArrowDownToLine, CheckCircle, Mail } from "lucide-react";
+import { ArrowDownToLine, CheckCircle, Leaf, Mail } from "lucide-react";
 import Link from "next/link";
 
 const perks = [
@@ -18,8 +17,8 @@ const perks = [
             "Our graphics and websites are meticulously crafted and quality-checked to ensure you receive only the best, professional-grade designs.",
     },
     {
-        name: "Guaranteed Quality",
-        Icon: CheckCircle,
+        name: "For the planet",
+        Icon: Leaf,
         description:
             "Our graphics and websites are meticulously crafted and quality-checked to ensure you receive only the best, professional-grade designs.",
     },
@@ -79,7 +78,6 @@ export default function Home() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <Footer />
         </>
     );
 }
