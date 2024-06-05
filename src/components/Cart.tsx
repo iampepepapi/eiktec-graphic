@@ -79,7 +79,7 @@ function Cart() {
                             className="relative mb-4 h-60 w-60 text-muted-foreground"
                         >
                             <Image
-                                src="/robot-no-cart.png"
+                                src="/robot_no_cart.png"
                                 fill
                                 alt="robot empty cart"
                             ></Image>
