@@ -95,7 +95,6 @@ const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: NavItemProps) => {
                                                         src={item.imageSrc}
                                                         alt={item.name}
                                                         fill
-                                                        unoptimized
                                                         className="object-fit border object-cover object-center"
                                                     />
                                                 </div>
