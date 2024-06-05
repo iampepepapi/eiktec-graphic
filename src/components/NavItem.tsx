@@ -92,6 +92,7 @@ const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: NavItemProps) => {
                                                     })}
                                                 >
                                                     <Image
+                                                        priority
                                                         src={item.imageSrc}
                                                         alt={item.name}
                                                         fill
