@@ -1,6 +1,6 @@
 export type FeaturedItem = {
-    name: string;
-    href: string;
+    name?: string;
+    href?: string;
     imageSrc?: string;
 };
 
@@ -10,11 +10,36 @@ export type Category = {
     label: string;
     value: string;
     style: CategoryStyle;
-    featured: FeaturedItem[];
+    featured?: FeaturedItem[];
+    href?: string;
+    isChevron: boolean;
 };
 
 export const PRODUCT_CATEGORIES: Category[] = [
+
     {
+        isChevron: false,
+        label: "Services",
+        value: "home",
+        style: "compact",
+        href: "/services",
+    },
+    {
+        isChevron: false,
+        label: "About Us",
+        value: "about_us",
+        style: "compact",
+        href: "/about-us",
+    },
+    {
+        isChevron: false,
+        label: "Contact",
+        value: "contact",
+        style: "compact",
+        href: "/contact",
+    },
+    {
+        isChevron: true,
         label: "UI Kits",
         value: "ui_kits",
         style: "normal",
@@ -37,8 +62,9 @@ export const PRODUCT_CATEGORIES: Category[] = [
         ],
     },
     {
-        label: "Icons",
-        value: "icons",
+        isChevron: true,
+        label: "Shop",
+        value: "shop",
         style: "normal",
         featured: [
             {
@@ -59,14 +85,15 @@ export const PRODUCT_CATEGORIES: Category[] = [
         ],
     },
     {
-        label: "Links",
+        isChevron: false,
+        label: "More",
         value: "links",
         style: "compact",
         featured: [
             {
-                name: "Business Templates",
+                name: "Products",
                 imageSrc: "static/nav/icons/bestsellers.jpg",
-                href: "#",
+                href: "/products",
             },
             {
                 name: "Corporate Templates",
@@ -76,9 +103,7 @@ export const PRODUCT_CATEGORIES: Category[] = [
                 name: "E-commerce Templates",
                 href: "#",
             },
-
-
-
         ],
     },
+
 ];

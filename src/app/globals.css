@@ -57,3 +57,37 @@
         @apply bg-background text-foreground;
     }
 }
+
+.plans {
+    position: relative;
+    overflow: visible;
+    opacity: 1; /* Ensure the content is fully visible */
+}
+
+.plans::before {
+    width: 500px;
+    height: 300px;
+    content: "";
+    background-image: linear-gradient(
+        43deg,
+        hsl(var(--primary)),
+        hsl(var(--input))
+    ); /* Correct variable usage */
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 50% 30% 20%;
+    filter: blur(90px);
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the gradient background */
+    transition: 1s;
+}
+
+@media only screen and (max-width: 768px) {
+    .plans::before {
+        height: 70%;
+        top: 50%;
+        left: 60%;
+        transform: translate(-40%, -30%, 10px);
+    }
+}

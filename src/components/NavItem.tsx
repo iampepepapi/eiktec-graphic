@@ -9,8 +9,8 @@ import Link from "next/link";
 
 // Type definitions
 export type FeaturedItem = {
-    name: string;
-    href: string;
+    name?: string;
+    href?: string;
     imageSrc?: string;
 };
 
@@ -20,7 +20,9 @@ export type Category = {
     label: string;
     value: string;
     style: CategoryStyle;
-    featured: FeaturedItem[];
+    featured?: FeaturedItem[];
+    href?: string;
+    isChevron: boolean;
 };
 
 interface NavItemProps {
@@ -28,29 +30,46 @@ interface NavItemProps {
     handleOpen: () => void;
     isOpen: boolean;
     isAnyOpen: boolean;
+    isChevron: boolean;
 }
 
-const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: NavItemProps) => {
+const NavItem = ({
+    isAnyOpen,
+    category,
+    handleOpen,
+    isOpen,
+    isChevron,
+}: NavItemProps) => {
     return (
         <div className="flex">
             <div className="relative flex items-center">
-                <Button
-                    className="gap-1.5"
-                    onClick={handleOpen}
-                    variant={isOpen ? "secondary" : "ghost"}
-                >
-                    {category.label}
-                    <ChevronDown
-                        className={cn(
-                            "h-4 w-4 text-muted-foreground transition-all",
-                            {
-                                "-rotate-180": isOpen,
-                            },
+                {category.href ? (
+                    <Link href={category.href}>
+                        <Button className="gap-1.5" variant="ghost">
+                            {category.label}
+                        </Button>
+                    </Link>
+                ) : (
+                    <Button
+                        className="gap-1.5"
+                        onClick={handleOpen}
+                        variant={isOpen ? "secondary" : "ghost"}
+                    >
+                        {category.label}
+                        {isChevron && (
+                            <ChevronDown
+                                className={cn(
+                                    "h-4 w-4 text-muted-foreground transition-all",
+                                    {
+                                        "-rotate-180": isOpen,
+                                    },
+                                )}
+                            />
                         )}
-                    />
-                </Button>
+                    </Button>
+                )}
             </div>
-            {isOpen ? (
+            {isOpen && category.featured && (
                 <div
                     className={cn(
                         "absolute inset-x-0 top-full text-sm text-muted-foreground",
@@ -94,7 +113,7 @@ const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: NavItemProps) => {
                                                     <Image
                                                         unoptimized={true}
                                                         src={item.imageSrc}
-                                                        alt={item.name}
+                                                        alt={item.name || ""}
                                                         fill
                                                         className="object-fit border object-cover object-center"
                                                     />
@@ -103,16 +122,22 @@ const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: NavItemProps) => {
                                             <div
                                                 className={
                                                     category.style === "compact"
-                                                        ? "m-4 ml-4"
+                                                        ? "ml-4"
                                                         : "mt-6"
                                                 }
                                             >
-                                                <Link
-                                                    href={item.href}
-                                                    className="block font-medium text-gray-900"
-                                                >
-                                                    {item.name}
-                                                </Link>
+                                                {item.href ? (
+                                                    <Link
+                                                        href={item.href}
+                                                        className="block font-medium text-gray-900"
+                                                    >
+                                                        {item.name}
+                                                    </Link>
+                                                ) : (
+                                                    <span className="block font-medium text-gray-900">
+                                                        {item.name}
+                                                    </span>
+                                                )}
                                                 <p>Shop now</p>
                                             </div>
                                         </div>
@@ -122,7 +147,7 @@ const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: NavItemProps) => {
                         </div>
                     </div>
                 </div>
-            ) : null}
+            )}
         </div>
     );
 };

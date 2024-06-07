@@ -1,4 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Plans from "@/components/Plans";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowDownToLine, CheckCircle, Leaf, Mail } from "lucide-react";
 import Link from "next/link";
@@ -75,6 +76,13 @@ export default function Home() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </MaxWidthWrapper>
+            </section>
+            <section className="border-t border-gray-200">
+                <MaxWidthWrapper className="py-20">
+                    <div>
+                        <Plans />
                     </div>
                 </MaxWidthWrapper>
             </section>

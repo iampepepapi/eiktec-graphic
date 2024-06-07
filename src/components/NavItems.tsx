@@ -4,6 +4,7 @@ import { PRODUCT_CATEGORIES, Category } from "@/config";
 import React, { useEffect, useRef, useState } from "react";
 import NavItem from "./NavItem";
 import { useOnClickOutside } from "@/hooks/use-on-click-outside";
+import Link from "next/link";
 
 const NavItems = () => {
     const [activeIndex, setActiveIndex] = useState<null | number>(null);
@@ -41,13 +42,16 @@ const NavItems = () => {
                 const isOpen = i === activeIndex;
 
                 return (
-                    <NavItem
-                        category={category}
-                        handleOpen={handleOpen}
-                        isOpen={isOpen}
-                        key={category.value}
-                        isAnyOpen={isAnyOpen}
-                    />
+                    <>
+                        <NavItem
+                            isChevron={category.isChevron}
+                            category={category}
+                            handleOpen={handleOpen}
+                            isOpen={isOpen}
+                            key={category.value}
+                            isAnyOpen={isAnyOpen}
+                        />
+                    </>
                 );
             })}
         </div>
