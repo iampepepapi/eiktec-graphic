@@ -12,6 +12,7 @@ import {
 import { Input } from "./ui/input"; // Assuming you have an input component from shadcn
 import { Textarea } from "./ui/textarea"; // Assuming you have a textarea component from shadcn
 import Image from "next/image";
+import Favico from "../../public/favico.png";
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -116,7 +117,7 @@ const ContactUs = () => {
                     <div className="relative flex md:flex-1">
                         <Image
                             unoptimized={true}
-                            src="/favico.png"
+                            src={Favico}
                             className="object-contain"
                             fill
                             alt="image"
