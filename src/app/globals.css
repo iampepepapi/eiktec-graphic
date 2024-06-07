@@ -62,10 +62,11 @@
     position: relative;
     overflow: visible;
     opacity: 1; /* Ensure the content is fully visible */
+    /* Hide horizontal overflow */
 }
 
 .plans::before {
-    width: 500px;
+    width: 200px; /* Adjust width based on viewport width */
     height: 300px;
     content: "";
     background-image: linear-gradient(
@@ -84,6 +85,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .plans {
+        overflow-x: hidden;
+    }
     .plans::before {
         height: 70%;
         top: 50%;
