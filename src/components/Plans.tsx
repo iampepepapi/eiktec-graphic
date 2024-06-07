@@ -3,7 +3,6 @@ import React from "react";
 import { plans } from "@/config/perks";
 import { Button } from "./ui/button"; // Assuming you have a button component from shadcn
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card"; // Assuming you have card components from shadcn
-import { formatPrice } from "@/lib/utils";
 
 const Plans = () => {
     return (
@@ -12,7 +11,7 @@ const Plans = () => {
                 Our Plans
             </h1>
 
-            <div className="flex w-full flex-col items-center justify-center sm:gap-4 md:flex-row md:items-stretch md:gap-4">
+            <div className="flex w-full flex-col items-center justify-between sm:gap-4 md:flex-row md:items-stretch md:gap-4">
                 {plans.map((plan, index) => (
                     <Card
                         key={index}

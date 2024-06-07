@@ -11,16 +11,16 @@ const Navbar = () => {
 
     return (
         <nav className="sticky inset-x-0 top-0 z-50 h-16 bg-white">
-            <header className="relative bg-white">
+            <header className="relative">
                 <MaxWidthWrapper>
                     <div className="border-b border-gray-200">
                         <div className="flex h-16 items-center">
                             {/* TODO: MOBILE navigation */}
 
                             <div className="ml-4 flex lg:ml-0">
-                                <Link href="/" className="">
+                                <Link href="/" className="w-20">
                                     <Image
-                                        className="size-20"
+                                        className="object-cover"
                                         priority
                                         src={EiktecGraphicSVG}
                                         alt="logo"
@@ -47,7 +47,7 @@ const Navbar = () => {
 
                                     {user ? null : (
                                         <span
-                                            className="h-6 w-px bg-gray-200"
+                                            className="h-6 w-px bg-foreground"
                                             aria-hidden="true"
                                         ></span>
                                     )}

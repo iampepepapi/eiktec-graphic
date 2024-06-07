@@ -1,3 +1,4 @@
+import ContactUs from "@/components/ContactUs";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Plans from "@/components/Plans";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -51,7 +52,7 @@ export default function Home() {
                 </div>
                 {/* TODO: Procduct showcase */}
             </MaxWidthWrapper>
-            <section className="border-t border-gray-200 bg-gray-50">
+            <section className="border-t border-border bg-secondary">
                 <MaxWidthWrapper className="py-20">
                     <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
                         {perks.map((perk) => (
@@ -83,6 +84,13 @@ export default function Home() {
                 <MaxWidthWrapper className="py-20">
                     <div>
                         <Plans />
+                    </div>
+                </MaxWidthWrapper>
+            </section>
+            <section className="border-t border-gray-200">
+                <MaxWidthWrapper className="py-20">
+                    <div>
+                        <ContactUs />
                     </div>
                 </MaxWidthWrapper>
             </section>

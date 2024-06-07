@@ -1,12 +1,12 @@
 import React from "react";
 import { cn } from "@/lib/utils"; // Adjust the import based on your project structure
-import { Linkedin, SmileIcon } from "lucide-react";
+import { SmileIcon } from "lucide-react";
 import { SimpleIcon } from "../lib/IconUtils"; // Adjust the import based on your project structure
-import { siFacebook, siX, siInstagram } from "simple-icons/icons";
+import { siFacebook, siX, siInstagram, siLinkedin } from "simple-icons/icons";
 
 function Footer() {
     return (
-        <footer className="bg-slate-50 py-10 text-gray-500">
+        <footer className="bg-secondary py-10 text-gray-500">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-wrap justify-between">
                     {/* Company Info */}
@@ -80,7 +80,10 @@ function Footer() {
                                     />
                                 </a>
                                 <a href="#" className={cn("group")}>
-                                    <Linkedin className="h-6 w-6 text-black transition-colors duration-300 group-hover:text-primary" />
+                                    <SimpleIcon
+                                        icon={siLinkedin}
+                                        className="h-6 w-6 transition-colors duration-300 group-hover:fill-primary"
+                                    />
                                 </a>
                             </nav>
                             <SmileIcon className="animate-bounce" />

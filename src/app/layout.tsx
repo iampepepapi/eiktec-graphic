@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +26,18 @@ export default function RootLayout({
                     inter.className,
                 )}
             >
-                <main className="relative flex min-h-screen flex-col">
-                    <Navbar />
-                    <div className="flex-1 flex-grow">{children}</div>
-                    <Footer />
-                </main>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="light"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <main className="relative flex min-h-screen flex-col">
+                        <Navbar />
+                        <div className="flex-1 flex-grow">{children}</div>
+                        <Footer />
+                    </main>
+                </ThemeProvider>
             </body>
         </html>
     );
