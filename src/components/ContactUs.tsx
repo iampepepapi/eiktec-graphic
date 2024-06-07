@@ -115,6 +115,7 @@ const ContactUs = () => {
                     </div>
                     <div className="relative flex md:flex-1">
                         <Image
+                            unoptimized={true}
                             src="/favico.png"
                             className="object-contain"
                             fill
