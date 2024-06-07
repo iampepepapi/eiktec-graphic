@@ -16,7 +16,7 @@ const Plans = () => {
                 {plans.map((plan, index) => (
                     <Card
                         key={index}
-                        className="relative w-96 border border-gray-200 md:w-80"
+                        className="relative mt-4 flex w-96 flex-col border border-gray-200 md:mt-0 md:w-80"
                     >
                         <CardHeader className="flex flex-col items-center">
                             <CardTitle className="mb-4 text-2xl font-bold">
