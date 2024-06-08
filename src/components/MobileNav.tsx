@@ -138,7 +138,7 @@ const MobileNav = () => {
                                     href="/sign-up"
                                     className="-m-2 block p-2 font-medium text-gray-900"
                                 >
-                                    Sign up
+                                    Sign up 😊
                                 </Link>
                             </div>
                         </div>
