@@ -37,10 +37,6 @@ We are here to help you bring your vision to life. Whether you need a new logo, 
 
 Thank you for considering Eiktec Graphics for your design needs. We look forward to working with you to create stunning visuals and exceptional web experiences.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 *This README provides an overview of Eiktec Graphics, highlighting our services, commitment to quality, creativity, and sustainability. For more detailed information, please visit our website or contact us directly.*
