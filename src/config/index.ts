@@ -1,3 +1,5 @@
+import { ArrowDownToLine, CheckCircle, Leaf } from "lucide-react";
+
 export type FeaturedItem = {
     name?: string;
     href?: string;
@@ -17,27 +19,27 @@ export type Category = {
 
 export const PRODUCT_CATEGORIES: Category[] = [
 
-    {
-        isChevron: false,
-        label: "Services",
-        value: "home",
-        style: "compact",
-        href: "/services",
-    },
-    {
-        isChevron: false,
-        label: "About Us",
-        value: "about_us",
-        style: "compact",
-        href: "/about-us",
-    },
-    {
-        isChevron: false,
-        label: "Contact",
-        value: "contact",
-        style: "compact",
-        href: "/contact",
-    },
+    // {
+    //     isChevron: false,
+    //     label: "Services",
+    //     value: "home",
+    //     style: "compact",
+    //     href: "/services",
+    // },
+    // {
+    //     isChevron: false,
+    //     label: "About Us",
+    //     value: "about_us",
+    //     style: "compact",
+    //     href: "/about-us",
+    // },
+    // {
+    //     isChevron: false,
+    //     label: "Contact",
+    //     value: "contact",
+    //     style: "compact",
+    //     href: "/contact",
+    // },
     {
         isChevron: true,
         label: "UI Kits",
@@ -47,17 +49,17 @@ export const PRODUCT_CATEGORIES: Category[] = [
             {
                 name: "Editor picks",
                 href: "#",
-                imageSrc: "static/nav/ui-kits/mixed.jpg",
+                imageSrc: "/static/nav/ui-kits/mixed.jpg",
             },
             {
                 name: "New Arrivals",
                 href: "#",
-                imageSrc: "static/nav/ui-kits/blue.jpg",
+                imageSrc: "/static/nav/ui-kits/blue.jpg",
             },
             {
                 name: "Bestseller",
                 href: "#",
-                imageSrc: "static/nav/ui-kits/purple.jpg",
+                imageSrc: "/static/nav/ui-kits/purple.jpg",
             },
         ],
     },
@@ -70,17 +72,17 @@ export const PRODUCT_CATEGORIES: Category[] = [
             {
                 name: "Favorite Icon Picks",
                 href: "#",
-                imageSrc: "static/nav/icons/picks.jpg",
+                imageSrc: "/static/nav/icons/picks.jpg",
             },
             {
                 name: "New Arrivals",
                 href: "#",
-                imageSrc: "static/nav/icons/new.jpg",
+                imageSrc: "/static/nav/icons/new.jpg",
             },
             {
                 name: "Bestselling Icons",
                 href: "#",
-                imageSrc: "static/nav/icons/bestsellers.jpg",
+                imageSrc: "/static/nav/icons/bestsellers.jpg",
             },
         ],
     },
@@ -92,7 +94,7 @@ export const PRODUCT_CATEGORIES: Category[] = [
         featured: [
             {
                 name: "Products",
-                imageSrc: "static/nav/icons/bestsellers.jpg",
+                imageSrc: "/static/nav/icons/bestsellers.jpg",
                 href: "/products",
             },
             {
@@ -107,3 +109,26 @@ export const PRODUCT_CATEGORIES: Category[] = [
     },
 
 ];
+
+
+export const perks = [
+    {
+        name: "Instant Delivery",
+        Icon: ArrowDownToLine,
+        description:
+            "Get your graphics and websites delivered instantly upon completion, ensuring you meet your deadlines without any delays.",
+    },
+    {
+        name: "Guaranteed Quality",
+        Icon: CheckCircle,
+        description:
+            "Our graphics and websites are meticulously crafted and quality-checked to ensure you receive only the best, professional-grade designs.",
+    },
+    {
+        name: "For the planet",
+        Icon: Leaf,
+        description:
+            "We are committed to sustainable practices in our design process, ensuring that our work supports the well-being of our planet.",
+    },
+];
+

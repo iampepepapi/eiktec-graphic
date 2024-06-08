@@ -2,29 +2,9 @@ import ContactUs from "@/components/ContactUs";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Plans from "@/components/Plans";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { ArrowDownToLine, CheckCircle, Leaf, Mail } from "lucide-react";
+import { perks } from "@/config";
+import { Mail } from "lucide-react";
 import Link from "next/link";
-
-const perks = [
-    {
-        name: "Instant Delivery",
-        Icon: ArrowDownToLine,
-        description:
-            "Get your graphics and websites delivered instantly upon completion, ensuring you meet your deadlines without any delays.",
-    },
-    {
-        name: "Guaranteed Quality",
-        Icon: CheckCircle,
-        description:
-            "Our graphics and websites are meticulously crafted and quality-checked to ensure you receive only the best, professional-grade designs.",
-    },
-    {
-        name: "For the planet",
-        Icon: Leaf,
-        description:
-            "Our graphics and websites are meticulously crafted and quality-checked to ensure you receive only the best, professional-grade designs.",
-    },
-];
 
 export default function Home() {
     return (

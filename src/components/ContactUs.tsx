@@ -65,6 +65,7 @@ const ContactUs = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
+                                        placeholder="Enter your name"
                                         className="mt-1 w-full"
                                     />
                                 </div>
@@ -82,6 +83,7 @@ const ContactUs = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
+                                        placeholder="Enter your email address"
                                         className="mt-1 w-full"
                                     />
                                 </div>
@@ -99,7 +101,10 @@ const ContactUs = () => {
                                         onChange={handleChange}
                                         required
                                         rows={4}
-                                        className="mt-1 w-full"
+                                        maxLength={320}
+                                        placeholder="Max 320 characters"
+                                        draggable={false}
+                                        className="mt-1 h-44 w-full resize-none"
                                     />
                                 </div>
                             </CardContent>

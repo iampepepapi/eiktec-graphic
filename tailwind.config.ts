@@ -72,6 +72,9 @@ const config = {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
             },
+            backgroundImage: {
+                'footer-pattern': "linear-gradient(to right bottom, rgba('#7ed56f', 0.8), rgba('#28b485',0.8)), url('/endless-constellation.svg')",
+            }
         },
     },
     plugins: [require("tailwindcss-animate")],
