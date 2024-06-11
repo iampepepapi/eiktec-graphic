@@ -42,6 +42,14 @@ function Footer() {
                             <li>
                                 <Link
                                     href="#"
+                                    className="hidden transition-colors duration-300 hover:text-primary"
+                                >
+                                    some space really hehe 😊
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="#"
                                     className="transition-colors duration-300 hover:text-primary"
                                 >
                                     Home
@@ -107,7 +115,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-8 text-center text-sm text-gray-500">
+                <div className="mt-12 text-center text-sm text-gray-500">
                     &copy; 2024 <span className="font- font-bold">eiktec</span>.
                     All rights reserved. 😊
                 </div>

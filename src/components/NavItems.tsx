@@ -42,16 +42,14 @@ const NavItems = () => {
                 const isOpen = i === activeIndex;
 
                 return (
-                    <>
-                        <NavItem
-                            isChevron={category.isChevron}
-                            category={category}
-                            handleOpen={handleOpen}
-                            isOpen={isOpen}
-                            key={category.value}
-                            isAnyOpen={isAnyOpen}
-                        />
-                    </>
+                    <NavItem
+                        key={category.value} // Ensure each item has a unique key
+                        isChevron={category.isChevron}
+                        category={category}
+                        handleOpen={handleOpen}
+                        isOpen={isOpen}
+                        isAnyOpen={isAnyOpen}
+                    />
                 );
             })}
         </div>

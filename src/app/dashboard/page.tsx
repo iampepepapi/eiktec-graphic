@@ -1,7 +1,8 @@
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import React from "react";
 
-function Dashboard() {
-    return <div>YOU ARE LOGGED IN</div>;
-}
+const Dashboard = () => {
+    return <div>Dashboard</div>;
+};
 
 export default Dashboard;

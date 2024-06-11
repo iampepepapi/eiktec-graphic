@@ -15,7 +15,8 @@ import { UserNav } from "./UserNav";
 import MobileNav from "./MobileNav";
 // components/Navbar.js
 async function Navbar() {
-    const { isAuthenticated } = getKindeServerSession();
+    const { isAuthenticated, getUser } = getKindeServerSession();
+    const user = await getUser();
 
     return (
         <nav className="sticky inset-x-0 top-0 z-50 h-16 bg-white">
@@ -44,10 +45,13 @@ async function Navbar() {
                                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                                     {(await isAuthenticated()) ? (
                                         <>
-                                            <LogoutLink>
-                                                <Button>Log Out</Button>
-                                            </LogoutLink>
-                                            <UserNav />
+                                            <UserNav
+                                                email={user?.email as string}
+                                                image={user?.picture as string}
+                                                name={
+                                                    user?.given_name as string
+                                                }
+                                            />
                                         </>
                                     ) : (
                                         <LoginLink>
