@@ -42,9 +42,9 @@ function Footer() {
                             <li>
                                 <Link
                                     href="#"
-                                    className="hidden transition-colors duration-300 hover:text-primary"
+                                    className="transition-colors duration-300 hover:text-primary"
                                 >
-                                    some space really hehe 😊
+                                    some space really hehe 😊.
                                 </Link>
                             </li>
                             <li>
