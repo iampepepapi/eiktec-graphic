@@ -4,7 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import React from "react";
 
 const featureItems = [
-    { name: "lorem ipsum dolor " },
+    { name: "lorem ipsum dolor ❓" },
     { name: "lorem ipsum dolor" },
     { name: "lorem ipsum dolor" },
     { name: "lorem ipsum dolor" },
