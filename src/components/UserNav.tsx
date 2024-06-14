@@ -37,7 +37,7 @@ export const UserNav = ({
                     variant="ghost"
                     className="relative h-10 w-10 rounded-full"
                 >
-                    <Avatar className="h-10 w-10 rounded-full p-1">
+                    <Avatar className="rounded-full">
                         <AvatarImage src={image} alt="" />
                         <AvatarFallback>user</AvatarFallback>
                     </Avatar>
