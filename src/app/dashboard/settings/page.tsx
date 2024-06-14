@@ -14,8 +14,10 @@ import prisma from "@/app/lib/db";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Button } from "@/components/ui/button";
 import { SubmitButton } from "@/components/SubmitButtons";
+import { revalidatePath, unstable_noStore as noStore } from "next/cache";
 
 async function getData(userId: string) {
+    noStore();
     const data = await prisma.user.findUnique({
         where: {
             id: userId,
@@ -29,13 +31,14 @@ async function getData(userId: string) {
     return data;
 }
 
-export default async function page() {
+export default async function SettingsPage() {
     const { getUser } = getKindeServerSession();
     const user = await getUser();
     const data = await getData(user?.id as string);
 
     async function postData(formData: FormData) {
         "use server";
+
         const name = formData.get("name") as string;
 
         await prisma.user.update({
@@ -43,9 +46,11 @@ export default async function page() {
                 id: user?.id,
             },
             data: {
-                name: name,
+                name: name ?? undefined,
             },
         });
+
+        revalidatePath("/", "layout");
     }
 
     return (
