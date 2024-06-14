@@ -43,7 +43,7 @@ export default async function page() {
                 id: user?.id,
             },
             data: {
-                name: name ?? undefined,
+                name: name,
             },
         });
     }
