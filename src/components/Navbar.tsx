@@ -19,7 +19,7 @@ async function Navbar() {
     const user = await getUser();
 
     return (
-        <nav className="sticky inset-x-0 top-0 z-50 h-16 bg-white">
+        <nav className="hello sticky inset-x-0 top-0 z-50 h-16 bg-white">
             <header className="relative">
                 <MaxWidthWrapper>
                     <div className="border-b border-gray-200">
