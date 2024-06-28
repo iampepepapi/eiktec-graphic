@@ -35,7 +35,7 @@ export const UserNav = ({
             <DropdownMenuTrigger asChild>
                 <Button
                     variant="ghost"
-                    className="relative h-10 w-10 rounded-full"
+                    className="relative ml-4 h-10 w-10 rounded-full"
                 >
                     <Avatar className="rounded-full">
                         <AvatarImage src={image} alt="" />

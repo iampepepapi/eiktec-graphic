@@ -37,12 +37,12 @@ async function Navbar() {
                                 </div>
                                 <MobileNav />
                             </div>
-                            <div className="z-50 hidden lg:ml-8 lg:mr-4 lg:block lg:self-stretch">
+                            <div className="z-50 hidden md:flex lg:ml-4 lg:mr-4 lg:block lg:self-stretch">
                                 <NavItems />
                             </div>
 
                             <div className="ml-auto flex items-center">
-                                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                                <div className="flex items-center md:flex md:flex-1 md:justify-end md:space-x-6">
                                     {(await isAuthenticated()) ? (
                                         <>
                                             <UserNav
@@ -54,7 +54,7 @@ async function Navbar() {
                                             />
                                         </>
                                     ) : (
-                                        <LoginLink>
+                                        <LoginLink className="hidden md:flex">
                                             <Button
                                                 className={buttonVariants({
                                                     variant: "outline",
@@ -68,7 +68,7 @@ async function Navbar() {
 
                                     {(await isAuthenticated()) ? null : (
                                         <span
-                                            className="h-6 w-px bg-foreground"
+                                            className="hidden h-6 w-px bg-foreground"
                                             aria-hidden="true"
                                         ></span>
                                     )}
@@ -76,7 +76,7 @@ async function Navbar() {
                                     {(await isAuthenticated()) ? (
                                         <p></p>
                                     ) : (
-                                        <RegisterLink>
+                                        <RegisterLink className="hidden md:flex">
                                             <Button
                                                 className={buttonVariants({
                                                     variant: "default",
@@ -89,7 +89,7 @@ async function Navbar() {
 
                                     {(await isAuthenticated()) ? (
                                         <span
-                                            className="h-6 w-px bg-gray-200"
+                                            className="mx-4 h-6 w-px bg-gray-200"
                                             aria-hidden="true"
                                         ></span>
                                     ) : null}
